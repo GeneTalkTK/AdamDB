@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sampleid: one
+  chrom: 1
+  pos: 1
+  ref: MyString
+  genotype: MyString
+  functional: MyString
+  gene: MyString
+  hgvs: MyString
+
+two:
+  sampleid: two
+  chrom: 1
+  pos: 1
+  ref: MyString
+  genotype: MyString
+  functional: MyString
+  gene: MyString
+  hgvs: MyString

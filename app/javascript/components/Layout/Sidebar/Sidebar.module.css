@@ -1,0 +1,19 @@
+.sidebar {
+    background-color: #252453;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+}
+.section{
+    color: white;
+}
+.items{
+    padding-left: 20px !important;
+}
+.item{
+    color: #888;
+    list-style: none;
+}
+.item:hover {
+    color:whitesmoke;
+}

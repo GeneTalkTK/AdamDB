@@ -1,0 +1,142 @@
+- section: Sample searches
+  forms: 
+  - title: Samples with quality
+    fields:
+      - type: Chrom
+        config:
+          fixed: X
+      - type: Pos
+  - title: Samples
+    fields:
+      - Function
+      - Foo 
+- section: Variant searches
+  forms:
+  - title: Basic
+    fields: 
+      - Chrom
+      - Pos
+  - title: Autosomal dominant
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+      - Abc
+  - title: Autosomal recessive
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: De novo trio
+    fields:
+      - Chrom
+      - Pos
+  - title: Disease panels
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Genes
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: ClinVar/HGMD
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: OMIM
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: HPO
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Tumor/Controls
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Same Variant
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Region
+    fields: 
+      - Foo
+- section: CNV
+  forms:
+  - title: CNV
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+- section: Coverage
+  forms:
+  - title: Coverage of genes
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Coverage of panels
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+- section: Other
+  forms:
+  - title: Homozygosity
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: IBS
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Import HPO
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+- section: Annotations/Report
+  forms:
+  - title: Variant annotations
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Case conclusions
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 
+  - title: Report
+    fields:
+      - Chrom
+      - Pos
+      - Function
+      - Foo 

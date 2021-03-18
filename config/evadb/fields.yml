@@ -1,0 +1,64 @@
+Foo:
+    tag: input
+    label: FOO
+    config:
+      type: text
+      value: laber
+
+Chrom:
+  tag: select
+  label: Chromosome
+  config:
+    options:
+      [1, 2, 3, 4, 5, 6 , 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, X, Y, Z]
+
+Abc:
+  tag: select
+  label: testfield
+  config:
+    options:
+      - value: a
+        displayValue: AAA
+      - value: b
+        displayValue: BBB
+      - value: c
+        displayValue: CCC
+
+Pos:
+  tag: input
+  label: Position
+  config: 
+    type: text
+  validatioin: 
+    isNumeric
+
+Function:
+  tag: boxes
+  label: Functional
+  config:
+    type: checkbox
+    options:
+      - unknown
+      - syn
+      - missense
+      - nonsense
+      - stoploss
+      - splice
+      - nearsplice
+      - frameshift
+      - indel
+      - 5-UTR
+      - 3-UTR
+      - non-coding
+      - mirna
+      - intronic
+      - intergenic
+      - regulation
+    defaults:
+      - unknown
+      - missense
+      - nonsense
+      - stoploss
+      - splice
+      - frameshift
+      - indel

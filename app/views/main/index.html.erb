@@ -1,0 +1,21 @@
+<% content_for :head do %>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+<% end %>
+
+<div id="root" ></div>
+
+<%= javascript_pack_tag 'index' %>
+
+<%# = content_tag :div,
+  id: "evadb_fields",
+  data: @fields.to_json do %>
+<%# end %>
+
+<div><strong><%= @output %></strong></div>
+
+<% EvadbQueries::get_queries.each do |cls| %>
+<%= Object.const_get(cls).execute %><br />
+<% end %>
+

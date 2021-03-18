@@ -1,0 +1,119 @@
+.contentbox {
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+.contentside {
+    float: left;
+}
+
+.contentmain {
+    overflow:hidden;
+    padding: 20px;
+}
+.contentmain:after {
+    clear: both;
+}
+.clearfix {
+    content   : "";
+    display   : block;
+    height    : 0;
+    clear     : both;
+    visibility: hidden;
+}
+/*
+@media (max-width: 920px){
+    .headleft {
+        display: none !important; 
+    }
+    .headmiddle {
+        border: none !important;
+    }
+    .head {
+        height: 100 !important;
+        background-color: #ccc !important;
+    }
+    .deenbox{
+        width: 10px !important; 
+        text-align: center;
+    }
+/*
+    .contentfl {
+    }
+*/
+/*
+    .contentbox {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    .contentside {
+        width: 100%;
+        order: 2 !important;
+    }
+    .contentmain {
+        width: 100%;
+        order: 1 !important;
+    }
+    .pagetitle{
+        font-size: 24px !important;
+    }
+    .title {
+        font-size: 32px !important;
+    }
+    .container {
+        padding: 40px !important;
+    }
+    .containerleft {
+        padding: 30px !important;
+    }
+}
+
+@media (min-width: 921px) and (max-width: 1280px){
+    .flexleft {
+        width: 25% !important;
+    }
+    
+    .flexmiddle {
+        width: 75% !important;
+    }   
+    .contentbox {
+        width: 100% !important;
+    }
+    .pagetitle{
+        font-size: 32px !important;
+    }
+    .title {
+        font-size: 42px !important;
+    }
+    .container {
+        padding: 60px !important;
+    }
+    .containerleft {
+        padding: 50px !important;
+    }
+}
+@media (min-width: 921px){
+    .navbar-brand {
+        display: none !important;
+    }
+    .contentside {
+        order: 1;
+    }
+    .contentmain {
+        order: 2;
+    }
+}
+@media (min-width: 1280px){
+    .container {
+        padding: 80px !important;
+    }
+    .containerleft {
+        padding: 70px !important;
+    }
+}
+@media (max-width: 640px){
+    .container {
+        padding: 20px !important;
+    }
+}
+*/

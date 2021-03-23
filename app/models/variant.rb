@@ -31,7 +31,7 @@ class Variant < ApplicationRecord
     d[ EVADBDATA_EFF     ] = func
     d[ EVADBDATA_HGVS    ] = hgvs
     d[ EVADBDATA_FREQ    ] = 0
-    d[ EVADBDATA_SAMPLES ] = sample_data
+    d[ EVADBDATA_SAMPLES ] = '' #sample_data
     d[ EVADBDATA_ALT     ] = allele.upcase
     return d
   end

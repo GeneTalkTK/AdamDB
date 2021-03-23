@@ -4,6 +4,7 @@ namespace 'vcf' do
 ###########################################################################
 task :populate => :environment do
     Dir.glob( "#{Rails.root}/DATA/VCF/*.vcf") do |file|
+      $stderr.puts "Importing #{file}"
       s = Sample.create( name: file )
       import_file( file, s )
     end
@@ -42,8 +43,8 @@ def import_file( file, id )
                 cov_num: line.coverage(0)[0],
                 cov:    line.coverage(0)[1],
                 cov_ab: line.coverage(0)[2],
-                hgvs:   line.hgvs,
-                sample_data: line.sample(0).to_json.to_s,
+                hgvs:   line.hgvs ? line.hgvs.truncate(255) : '',
+                sample_data: line.sample(0) ? line.sample(0).to_json.to_s.truncate(255) : '',
                 pnv:    rand()
         )
     end

@@ -20,15 +20,23 @@ class EvadbController < ApplicationController
             print Rails.logger.info params[:evadb].inspect
         end
 
-        params[:values].each do |key, value|
-            print "\n#{key} => #{value}\n"
-            print "\n#{key} => #{params[:values][key]}\n"
-            print key.constantize.execute
-        end
+        #params[:values].each do |key, value|
+        #    print "\n#{key} => #{value}\n"
+        #    print "\n#{key} => #{params[:values][key]}\n"
+        #end
+
         variants = Variant
-        variants = Chrom.where(variants, params[:values])
-        variants = Pos.where(variants, params[:values])
-        
+        # variants = Chrom.where(variants, params[:values])
+        # variants = Pos.where(variants, params[:values])
+
+        params[:form][:fields].each do |field|
+            puts field
+            puts params[:values][:fields]
+            variants = Object.const_get( field.camelcase ).where( variants, params[:values] )
+        end
+
+        variants = variants.order( :chrom, :start )
+
         vararr = []
         variants.find_each do |v|
             vararr << v.to_compact

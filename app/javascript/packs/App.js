@@ -6,7 +6,7 @@ import FormContainer from '../components/FormGenerator/FormContainer';
 import Variants from '../components/Views/Variants/Variants';
 
 const Dummy = () => {
-    return <h1>EVAD DB</h1>
+    return <h1>EVA DB Proof of concept</h1>
 }
 
 const App = () => {

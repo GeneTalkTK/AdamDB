@@ -1,4 +1,4 @@
-class Abc < EvadbQuery
+class CovGt < EvadbQuery
   
   #----------------------------------------------------------
   def self.descr
@@ -10,22 +10,18 @@ END_OF_DESCRIPTION
   #----------------------------------------------------------
   def self.form
     return <<~END_OF_FORM_DEFINITION
-abc:
-  tag: select
-  label: testfield
+cov_gt:
+  tag: input
+  label: 'Cov >'
   config:
-    options:
-      - value: a
-        displayValue: AAA
-      - value: b
-        displayValue: BBB
-      - value: c
-        displayValue: CCC 
+  type: text
+  value: 
 END_OF_FORM_DEFINITION
   end
 
   #----------------------------------------------------------
   def self.where( relation, params )
-      return relation
+      return params[:cov_gt] ? relation.where( "cov > ? ", params[:cov_gt] )
+                              : relation
   end
 end

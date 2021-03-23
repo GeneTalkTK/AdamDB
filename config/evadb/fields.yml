@@ -1,18 +1,11 @@
-Foo:
-    tag: input
-    label: FOO
-    config:
-      type: text
-      value: laber
-
-Chrom:
-  tag: select
-  label: Chromosome
+#FOO
+foo:
+  tag: input
+  label: 'foo'
   config:
-    options:
-      [1, 2, 3, 4, 5, 6 , 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, X, Y, Z]
-
-Abc:
+  type: text
+  value: 
+abc:
   tag: select
   label: testfield
   config:
@@ -22,17 +15,8 @@ Abc:
       - value: b
         displayValue: BBB
       - value: c
-        displayValue: CCC
-
-Pos:
-  tag: input
-  label: Position
-  config: 
-    type: text
-  validatioin: 
-    isNumeric
-
-Function:
+        displayValue: CCC 
+function:
   tag: boxes
   label: Functional
   config:
@@ -62,3 +46,29 @@ Function:
       - splice
       - frameshift
       - indel
+pos_gt:
+  tag: input
+  label: 'Position >'
+  config: 
+    type: text
+  validation: 
+    isNumeric
+chrom:
+  tag: select
+  label: Chromosome
+  config:
+    options:
+      [1, 2, 3, 4, 5, 6 , 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, X, Y, M]
+cov_gt:
+  tag: input
+  label: 'Cov >'
+  config:
+  type: text
+  value: 
+pos_lt:
+  tag: input
+  label: 'Position <'
+  config: 
+    type: text
+  validation: 
+    isNumeric

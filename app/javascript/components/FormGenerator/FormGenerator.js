@@ -15,6 +15,10 @@ const initFormState =  (fields, current) => {
 
     let init = {};
     current.fields.forEach( key => {
+                                        console.log('Configuring field ' + key )
+                                        if ( !fields.[key] ) {
+                                            console.log( "[ERROR: key not found ]", key)
+                                        }
                                         let initValue = '';
                                         if ( fields[key].tag === 'select' ) {
                                             initValue = fields[key].config.options[0].value ?? fields[key].config.options[0]
@@ -22,7 +26,7 @@ const initFormState =  (fields, current) => {
                                         init[key] = {};
                                         init[key]['value'] = fields[key]['value'] ?? initValue;
                                         init[key]['touched'] = false;
-                                        init[key]['valid'] = !fields[key]['validation'];
+                                        init[key]['valid'] = true; //!fields[key]['validation'];
                                    });
 
     return init;

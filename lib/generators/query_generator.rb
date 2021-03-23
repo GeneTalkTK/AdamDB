@@ -1,4 +1,11 @@
-class Foo < EvadbQuery
+class QueryGenerator < Rails::Generators::NamedBase
+  desc "Generator stub for EVADB query class. NAME must be in snake case."
+
+  def create_query_class
+    camel = name.camelize
+
+    create_file "app/lib/queries/#{name}.rb", <<ENDOFTEMPLATE
+class #{camel} < EvadbQuery
   
   #----------------------------------------------------------
   def self.descr
@@ -10,9 +17,9 @@ END_OF_DESCRIPTION
   #----------------------------------------------------------
   def self.form
     return <<~END_OF_FORM_DEFINITION
-foo:
+#{name}:
   tag: input
-  label: 'foo'
+  label: '#{name.titleize}'
   config:
   type: text
   value: 
@@ -21,7 +28,11 @@ END_OF_FORM_DEFINITION
 
   #----------------------------------------------------------
   def self.where( relation, params )
-      pp Rails.logger.info( params.to_yaml )
-      return relation
+      return params[:#{name}] ? relation
+                              : relation
+  end
+end
+ENDOFTEMPLATE
+
   end
 end

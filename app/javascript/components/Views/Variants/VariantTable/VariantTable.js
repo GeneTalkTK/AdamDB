@@ -274,7 +274,7 @@ class VariantTable extends React.PureComponent {
                              </div>
                              <hr />
                              <SearchBar 
-                                        placeholder="Search in PEDIA results"
+                                        placeholder="Search in results"
                                         { ...props.searchProps } />
                              <hr />
                              <p>Show/Hide column:</p>

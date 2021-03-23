@@ -1,17 +1,21 @@
 class EvadbQuery
-    @@queries = []
-
     def self.register
-        EvadbQueries::register( self.name )
+        EvadbQueries::register( self )
     end
 
-    def self.get_queries
-        return @@queries
-    end 
-    def execute
+    def self.execute
         #Rails.logger.error("Foo executed")
         return "My name is "  + self.name
     end 
+
+    def self.descr
+        return ''
+    end
+
+    def self.form
+        return ''
+    end    
+
     def self.where( relation )
         return relation
     end

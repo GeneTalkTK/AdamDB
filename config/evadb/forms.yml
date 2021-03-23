@@ -2,141 +2,168 @@
   forms: 
   - title: Samples with quality
     fields:
-      - type: Chrom
+      - type: chrom
         config:
           fixed: X
       - type: Pos
   - title: Samples
     fields:
-      - Function
-      - Foo 
+      - function
+      - foo 
 - section: Variant searches
   forms:
   - title: Basic
     fields: 
-      - Chrom
-      - Pos
+      - chrom
+      - pos_gt
+      - pos_lt
+      - cov_gt
   - title: Autosomal dominant
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
-      - Abc
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
+      - abc
   - title: Autosomal recessive
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: De novo trio
     fields:
-      - Chrom
-      - Pos
+      - chrom
+      - pos_gt
+      - pos_lt
   - title: Disease panels
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Genes
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: ClinVar/HGMD
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: OMIM
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: HPO
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Tumor/Controls
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Same Variant
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Region
     fields: 
-      - Foo
+      - foo
 - section: CNV
   forms:
   - title: CNV
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
 - section: Coverage
   forms:
   - title: Coverage of genes
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Coverage of panels
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
 - section: Other
   forms:
   - title: Homozygosity
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: IBS
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Import HPO
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
 - section: Annotations/Report
   forms:
   - title: Variant annotations
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Case conclusions
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
   - title: Report
     fields:
-      - Chrom
-      - Pos
-      - Function
-      - Foo 
+      - chrom
+      - pos_gt
+      - pos_lt
+      - function
+      - foo 
+- section: My forms
+  forms:
+  - title: super query
+    fields: 
+      - chrom
+      - foo

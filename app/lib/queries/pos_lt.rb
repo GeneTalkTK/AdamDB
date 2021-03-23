@@ -1,4 +1,4 @@
-class Abc < EvadbQuery
+class PosLt < EvadbQuery
   
   #----------------------------------------------------------
   def self.descr
@@ -10,22 +10,19 @@ END_OF_DESCRIPTION
   #----------------------------------------------------------
   def self.form
     return <<~END_OF_FORM_DEFINITION
-abc:
-  tag: select
-  label: testfield
-  config:
-    options:
-      - value: a
-        displayValue: AAA
-      - value: b
-        displayValue: BBB
-      - value: c
-        displayValue: CCC 
+pos_lt:
+  tag: input
+  label: 'Position <'
+  config: 
+    type: text
+  validation: 
+    isNumeric
 END_OF_FORM_DEFINITION
   end
 
   #----------------------------------------------------------
   def self.where( relation, params )
-      return relation
+      return params[:pos_lt] ? relation.where( "start < ? ", params[:pos_lt])
+                            : relation
   end
 end

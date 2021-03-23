@@ -10,12 +10,12 @@ Prerequisites:
 Install:
 * git clone
 * In the project folder
-- bundle install
-- yarn install
-- edit config/database.yml to connect to your database
-- rails db:create
-- rails db:migrate
-- To fill the database with test data you may use rake vcf:populate
+  - bundle install
+  - yarn install
+  - edit config/database.yml to connect to your database
+  - rails db:create
+  - rails db:migrate
+  - To fill the database with test data you may use rake vcf:populate
 
 Run:
 * rails s

@@ -1,24 +1,22 @@
 # README
+This is a playground for testing concepts for the development of the EvaDB frontend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prerequisites:
+* Ruby 2.6 (there may be issues with the mysql adapter in ruby 2.7), I recommend using rvm to install ruby
+* node.js, current version
+* yarn
+* MariaDB or MySQL
 
-Things you may want to cover:
+Install:
+* git clone
+* In the project folder
+- bundle install
+- yarn install
+- edit config/database.yml to connect to your database
+- rails db:create
+- rails db:migrate
+- To fill the database with test data you may use rake vcf:populate
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run:
+* rails s
+* connect browser to localhost:3000

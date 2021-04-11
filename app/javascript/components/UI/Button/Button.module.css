@@ -12,6 +12,14 @@
     border-radius:5px;
 }
 
+.Button a {
+    color: #888;
+    text-decoration: none;
+}
+.Button a:hover {
+    color:white;
+}
+
 .Button:hover, .Button:active {
     background-color: blue;
     border: 1px solid #888;

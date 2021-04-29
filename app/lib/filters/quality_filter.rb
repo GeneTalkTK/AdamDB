@@ -1,0 +1,3 @@
+class QualityFilter < GtFilter
+
+end

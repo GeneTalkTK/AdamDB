@@ -7,7 +7,7 @@ import Spinner from '../UI/Spinner/Spinner';
 
 const FormContainer = (props) => (
     props.submitted 
-        ? <Redirect to="/variants" /> 
+        ? <Redirect to="/evadb/variants" /> 
         : ( props.current 
             ? <FormGenerator /> 
             : null 

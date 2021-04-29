@@ -1,119 +1,319 @@
-.contentbox {
-    width: 100%;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    min-height: 99vh;
+}
+
+  /*
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'U buntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+   sans-serif;
+  */
+  
+code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+  
+.content {
     overflow: hidden;
     z-index: 10;
+    margin-top: 50px;
+    padding: 100px 100px 120px 100px;
+}
+.wide {
+    padding: 0 0 120px 0 !important;
 }
 .contentside {
     float: left;
 }
-
-.contentmain {
-    overflow:hidden;
-    padding: 20px;
-}
-.contentmain:after {
-    clear: both;
-}
-.clearfix {
-    content   : "";
-    display   : block;
-    height    : 0;
-    clear     : both;
-    visibility: hidden;
-}
-/*
-@media (max-width: 920px){
-    .headleft {
-        display: none !important; 
-    }
-    .headmiddle {
-        border: none !important;
-    }
-    .head {
-        height: 100 !important;
-        background-color: #ccc !important;
-    }
-    .deenbox{
-        width: 10px !important; 
-        text-align: center;
-    }
-/*
-    .contentfl {
-    }
-*/
-/*
-    .contentbox {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-    .contentside {
-        width: 100%;
-        order: 2 !important;
-    }
-    .contentmain {
-        width: 100%;
-        order: 1 !important;
-    }
-    .pagetitle{
-        font-size: 24px !important;
-    }
-    .title {
-        font-size: 32px !important;
-    }
-    .container {
-        padding: 40px !important;
-    }
-    .containerleft {
-        padding: 30px !important;
-    }
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
 }
 
-@media (min-width: 921px) and (max-width: 1280px){
-    .flexleft {
-        width: 25% !important;
+.Toolbar{
+    padding: 0 100px 0 200px;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.Toolbar nav {
+    height: 100%;
+}
+
+.Logo {
+    height: 80%;
+}
+.LogoText {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.SideDrawer .LogoText {
+    color: red;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.SideDrawerLogo {
+    height: 11%;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 599px){
+    .DesktopOnly{
+        display: none;
+    }
+    .Content {
+        padding: 60px 40px 0px 40px !important;
+    }
+    .Toolbar {
+        padding: 0px 40px 0px 40px !important;
+        height: 50px
+    }
+    .LogoText {
+        font-size: large !important;
+        float: right !important;
+        text-align: right !important;
+    }
+}
+
+.NavigationItems {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+}
+.container{
+    display: flex;
+    flex-flow: column;
+}
+.main {
+    padding-left: 20px;
+    padding-top: 40px;
+}
+.distribute {
+    justify-content: space-around;
+}
+.Container button {
+    border: none;
+    background: transparent;
+}
+
+@media (min-width: 600px) {
+    .NavigationItems {
+        flex-flow: row;
+    }
+    .Container{
+        flex-flow: row;
+    }
+    .DrawerToggle {
+        display: none;
+    }
+}
+
+.NavigationItem {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.NavigationItem a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+    color: #888;
+}
+
+@media (min-width: 600px) {
+    .NavigationItem {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
     }
     
-    .flexmiddle {
-        width: 75% !important;
-    }   
-    .contentbox {
-        width: 100% !important;
+    .NavigationItem a {
+        height: 100%;
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent;
     }
-    .pagetitle{
-        font-size: 32px !important;
-    }
-    .title {
-        font-size: 42px !important;
-    }
-    .container {
-        padding: 60px !important;
-    }
-    .containerleft {
-        padding: 50px !important;
+    
+    .NavigationItem a:hover,
+    .NavigationItem a:active,
+    .NavigationItem a.active {
+        background-color: red;
+        border-bottom: 4px solid blue;
+        color: white;
     }
 }
-@media (min-width: 921px){
-    .navbar-brand {
-        display: none !important;
-    }
-    .contentside {
-        order: 1;
-    }
-    .contentmain {
-        order: 2;
-    }
+/*
+.Button {
+    background-color: red !important; 
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.25rem;
+
+    justify-content: center;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: calc(0.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
-@media (min-width: 1280px){
-    .container {
-        padding: 80px !important;
-    }
-    .containerleft {
-        padding: 70px !important;
-    }
+.Button a {
+    color: #EEE;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+
 }
-@media (max-width: 640px){
-    .container {
-        padding: 20px !important;
-    }
+.Button:first-of-type {
+    margin-left: 0;
+}
+
+.Button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.Success {
+    color: #5C9210;
+}
+
+.Danger {
+    color: #944317;
 }
 */
+
+/** SIDE DRAWER **/ 
+
+.SideDrawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.SideDrawer .DrawerToggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+.SideDrawer .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 30px;
+    background: transparent;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+  
+.SideDrawer .hamburger > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fafafa;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+.SideDrawer .hamburger > div:before,
+.SideDrawer .hamburger > div:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: inherit;
+    height: 3px;
+    width: 100%;
+    z-index: 1;
+}
+.SideDrawer .hamburger > div:after {
+    top: -10px;
+}
+.SideDrawer .DrawerToggle:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+.SideDrawer .DrawerToggle:checked + .hamburger > div:before,
+.SideDrawer .DrawerToggle:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+.SideDrawerMenu {
+    position: fixed;
+    padding: 60px 0 0 20px;
+    top: 0;
+    left: 0;
+    background:red;
+    height: 100%;
+    width: 280px;
+    display: flex;
+    transition: transform 0.3s ease-out;
+    transform: translateX(-100%);
+}
+.SideDrawer .DrawerToggle:checked ~ .SideDrawerMenu {
+    transform: translateX(0);
+}
+.SideDrawer .DrawerToggle:not(:checked) ~ .SideDrawerMenu {
+    transform: translateX(-100%);
+}
+@media (min-width: 600px) {
+    .SideDrawer {
+        display: none;
+    }
+}  

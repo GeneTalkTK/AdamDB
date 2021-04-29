@@ -483,4 +483,10 @@ EOF
      return file.gsub(/[^\w\.-]+/,'_').gsub(/\.(?!vcf|gz|zip)/, '_')
   end
 
+  ###########################################################################
+  # @@TODO: Test
+  def self.get_vep_hash( vep_keys, vep_data )
+    Hash[ vep_keys.map{ |x| x.downcase.to_sym }.zip( vep_data.split('|')) ]
+  end
+
 end

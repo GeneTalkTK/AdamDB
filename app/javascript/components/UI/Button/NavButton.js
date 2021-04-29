@@ -6,8 +6,10 @@ import styles from './Button.module.css';
 const NavButton = (props) => (
     <button 
         className={[styles.Button, styles[props.btnType]].join(' ')}
-        disabled={props.disabled} >
-        <NavLink activeClassName={styles.active} to={props.link} exact={props.exact} >
+        disabled={props.disabled}
+        style={props.style} 
+    >
+        <NavLink activeClassName={styles.active} to={props.link} exact={props.exact} style={{padding: "10px 45px"}}>
             {props.label}
         </NavLink>
     </button>

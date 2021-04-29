@@ -1,45 +1,44 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect, NavLink } from 'react-router-dom';
 //import NavigationItems from '../components/UI/Navigation/NavigationItems/NavigationItems';
 import NavButton from '../components/UI/Button/NavButton';
 
 import Layout from '../components/Layout/Layout';
-import FormContainer from '../components/FormGenerator/FormContainer';
+import MainLayout from '../components/Layout/MainLayout'
+import EvaDB from '../components/EvaDB/EvaDB';
+import Filter from '../components/Filter/Filter';
 import Variants from '../components/Views/Variants/Variants';
 import Sandbox from '../components/Sandbox/Sandbox';
 import Keepout from '../images/Keepout.png';
+import Widget from '../components/UI/Widget/Widget'
 
+import styles from './App.module.scss';
 
 const Dummy = () => {
-  return <>
-    <div align='center'>
-      <img src={Keepout} />
+  return <MainLayout>
+    <div align='center' style={{padding: "50px"}}>
+        <NavLink to="/react_sandbox">
+            <img src={Keepout} />
+        </NavLink>
     </div>
-    <div style={{marginTop: '50px'}}>
-      <NavButton link = '/sandbox' label = 'Sandbox' />
-    </div>
-    </>
+  </MainLayout>
 }
 
-const Dommy = () => {
-  return <>
-  <h1>EVA DB Proof of concept</h1>
-  Moin!
-  </>
-}
+const DummyS = () => <Redirect to='/react_sandbox' />
 
 const App = () => {
-    return <>
+    return <div className={styles.App}>
                 <Layout>
                     <Switch>
-                        <Route path = "/evadbquery" component = {FormContainer} />
+                        <Route path = "/evadb" component = {EvaDB} />
                         <Route path = "/variants" component = {Variants} />
-                        <Route path = "/sandbox" component = {Sandbox} />
-                        <Route path = "/bar"  component = {Dommy} />
+                        <Route path = "/react_sandbox" component = {Sandbox} />
+                        <Route path = "/filter" component = {Filter} />
+                        <Route path = "/bar"  component = {Dummy} />
                         <Route path = "/" exact component = {Dummy} />
                     </Switch>
                 </Layout>
-           </>
+           </div>
 
 }
 

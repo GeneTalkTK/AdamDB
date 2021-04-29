@@ -1,0 +1,21 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+}
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.button{
+    border: none;
+    background: transparent;
+}
+@media (min-width: 600px) {
+    .container{
+        flex-flow: row;
+    }
+}

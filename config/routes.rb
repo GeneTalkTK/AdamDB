@@ -14,11 +14,10 @@ Rails.application.routes.draw do
   get 'query', to: 'beacon#query'
   get 'info', to: 'beacon#info'
 
+  get 'sandbox/index'
   post 'sandbox/img'
   
-  get '/evadbquery', to: redirect('/')
-  get '/variants', to: redirect('/')
-  get '/sandbox', to: redirect('/')
+  get '*path', to: redirect('/')
   # match '*', to: 'main#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -7,9 +7,9 @@
     color: #CCC;
     font-family: inherit;
     font-size: 1.2em;
-    padding: 10px 45px;
     box-shadow: 2px 2px 2px #666;
     border-radius:5px;
+    height: 40px;
 }
 
 .Button a {

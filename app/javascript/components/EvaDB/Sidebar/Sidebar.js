@@ -20,7 +20,7 @@ const Sidebar = (props) => {
     const itemChangeHandler = (form) => {
         props.initQuery();
         props.onItemChange(form);
-        props.history.push('/evadbquery');
+        props.history.push('/evadb/evadbquery');
     }
 
     let Items = props.error ? <p>Error: Forms cannot be loaded!</p> : <Spinner />

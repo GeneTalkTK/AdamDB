@@ -1,0 +1,3 @@
+class FunctionalFilter < GtFilter
+
+end

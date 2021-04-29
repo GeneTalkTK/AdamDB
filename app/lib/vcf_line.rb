@@ -8,6 +8,7 @@ class VcfLine
   # just for debug purposes!
   attr_reader :data
   attr_reader :cov_ab
+  attr_reader :meta
   
  ###########################################################################
   def self.is_comment( line )
@@ -20,10 +21,15 @@ class VcfLine
   end
 
   ###########################################################################
-  def initialize( line )
+  def initialize( line, meta=nil )
     @data = VcfTools::parse_vcf_line( line ) if line.present?
     @cov_ab = []
     @infohash = nil
+    @meta = meta
+    @vepdata = {}
+    if( @meta != nil && @meta[:vep_header].present? && @data[:info][:csq].present?)
+      @vepdata = VcfTools::get_vep_hash( @meta[:vep_header], @data[:info][:csq])
+    end
   end
 
   ###########################################################################
@@ -88,6 +94,11 @@ class VcfLine
   
   #============================================================================
   # Get data from info column
+
+  ###########################################################################
+  def vep()
+    @vepdata
+  end
 
   ###########################################################################
   def func()

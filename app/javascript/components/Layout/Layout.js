@@ -1,11 +1,9 @@
 import React from 'react'
 
-import Header from './Header/Header';
-import Sidebar from './Sidebar/Sidebar';
 
-//import Toolbar from '../Navigation/Toolbar/Toolbar'
+import Toolbar from './Navigation/ToolBar/Toolbar'
 //import SideDrawer from '../Navigation/SideDrawer/SideDrawer'
-
+import Footer from './Footer/Footer';
 import styles from './Layout.module.css'
 
 class Layout extends React.Component {
@@ -28,20 +26,12 @@ class Layout extends React.Component {
     render() {
         return (
             <>
-                <Header />
-                <div className={styles.clearfix}></div>
-                <div className={styles.contentbox}>
-                    <div className={styles.contentside} >
-                        <Sidebar />
-                    </div>
-                    <div className={styles.contentmain} >
-                        <section className={styles.section}>
-                            {this.props.children}
-                        </section>
-                    </div>
-                </div>
+                <Toolbar />
+                    {this.props.children}
+                <Footer />
             </>)
     }
+
 }
 
 export default Layout;

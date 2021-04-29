@@ -1,12 +1,10 @@
 class EvadbQueries
-    QUERY_LIB_PATH = "#{Rails.root}/app/lib/queries"
-
+    
     @queries = []
     @fields=''
 
     def self.initialize
-
-        Dir.each_child( QUERY_LIB_PATH ) do |file|            
+        Dir.each_child( Rails.configuration.evadb.query_lib_path ) do |file|            
             Object.const_get( File.basename(file, '.*').camelcase ).register            
         end
 

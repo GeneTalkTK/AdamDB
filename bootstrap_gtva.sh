@@ -267,3 +267,62 @@ ZFIN_zebrafish_gene
 ZFIN_zebrafish_structure
 ZFIN_zebrafish_phenotype_quality
 ZFIN_zebrafish_phenotype_tag
+
+
+# Install Gene tables for HGNC datafile
+
+rails g scaffold Gene \
+hgnc_id:string \
+symbol:string \
+name:string \
+locus_group:string \
+locus_type:string \
+status:string \
+location:string \
+location_sortable:string \
+alias_symbol:string \
+alias_name:string \
+prev_symbol:string \
+prev_name:string \
+gene_family:string \
+gene_family_id:string \
+date_approved_reserved:string \
+date_symbol_changed:string \
+date_name_changed:string \
+date_modified:string \
+entrez_id:string \
+ensembl_gene_id:string \
+vega_id:string \
+ucsc_id:string \
+ena:string \
+refseq_accession:string \
+ccds_id:string \
+uniprot_ids:string \
+pubmed_id:string \
+mgd_id:string \
+rgd_id:string \
+lsdb:string \
+cosmic:string \
+omim_id:string \
+mirbase:string \
+homeodb:string \
+snornabase:string \
+bioparadigms_slc:string \
+orphanet:string \
+pseudogene.org:string \
+horde_id:string \
+merops:string \
+imgt:string \
+iuphar:string \
+kznf_gene_catalog:string \
+mamit-trnadb:string \
+cd:string \
+lncrnadb:string \
+enzyme_id:string \
+intermediate_filament_db:string \
+rna_central_ids:string \
+lncipedia:string \
+gtrnadb:string \
+agr:string \
+
+ 

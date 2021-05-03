@@ -10,9 +10,9 @@ class CreateGenes < ActiveRecord::Migration[6.1]
       t.string :location
       t.string :location_sortable
       t.string :alias_symbol
-      t.string :alias_name, :limit => 500
+      t.text   :alias_name
       t.string :prev_symbol
-      t.string :prev_name, :limit => 750
+      t.text   :prev_name
       t.string :gene_family
       t.string :gene_family_id
       t.string :date_approved_reserved
@@ -30,7 +30,7 @@ class CreateGenes < ActiveRecord::Migration[6.1]
       t.string :pubmed_id
       t.string :mgd_id
       t.string :rgd_id
-      t.string :lsdb, :limit => 500
+      t.text   :lsdb
       t.string :cosmic
       t.string :omim_id
       t.string :mirbase

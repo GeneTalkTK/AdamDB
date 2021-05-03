@@ -281,9 +281,9 @@ status:string \
 location:string \
 location_sortable:string \
 alias_symbol:string \
-alias_name:string \
+alias_name:text \
 prev_symbol:string \
-prev_name:string \
+prev_name:text \
 gene_family:string \
 gene_family_id:string \
 date_approved_reserved:string \
@@ -301,7 +301,7 @@ uniprot_ids:string \
 pubmed_id:string \
 mgd_id:string \
 rgd_id:string \
-lsdb:string \
+lsdb:text \
 cosmic:string \
 omim_id:string \
 mirbase:string \
@@ -309,13 +309,13 @@ homeodb:string \
 snornabase:string \
 bioparadigms_slc:string \
 orphanet:string \
-pseudogene.org:string \
+pseudogene_org:string \
 horde_id:string \
 merops:string \
 imgt:string \
 iuphar:string \
 kznf_gene_catalog:string \
-mamit-trnadb:string \
+mamit_trnadb:string \
 cd:string \
 lncrnadb:string \
 enzyme_id:string \
@@ -325,4 +325,3 @@ lncipedia:string \
 gtrnadb:string \
 agr:string \
 
- 

@@ -1,0 +1,2 @@
+class Demoimg < ApplicationRecord
+end
